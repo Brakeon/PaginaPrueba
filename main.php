@@ -15,6 +15,8 @@ $batman = new Heroe("Batman", 1939, "ninguno", "...", "dc");
 $arrayHeroe = array($hulk, $spiderman, $superman, $batman);
 
 $arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
+
+echo "hola";
 ?>
 
 </body>
