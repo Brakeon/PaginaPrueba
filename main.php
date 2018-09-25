@@ -19,6 +19,7 @@ $arrayHeroe = array($hulk, $spiderman, $superman, $batman);
 $arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
 
 echo "<h1>hola\n</h1>";
+echo $batman->ComprobarUniverso();
 
 foreach($arrayHeroe as $heroe){
     ?>
@@ -29,7 +30,7 @@ foreach($arrayHeroe as $heroe){
             <p class="card-text">Año de aparición: <?php echo $heroe->fecha ?></p>
             <p class="card-text">Poderes: <?php echo $heroe->poderes ?></p>
             <p class="card-text">Biografía: <?php echo $heroe->bio ?></p>
-            <img class="card-img-top" src=".../cards/<?php echo $heroe->ComprobarUniverso() ?>.jpg" alt="Card image cap">
+            <img class="card-img-top" src=".../cards/<?php echo $heroe->ComprobarUniverso() ?>" alt="Card image cap">
            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
