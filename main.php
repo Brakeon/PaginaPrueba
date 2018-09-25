@@ -23,7 +23,6 @@ echo "<h1>hola\n</h1>";
 foreach($arrayHeroe as $heroe){
     ?>
     <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src=".../cards/" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title"><?php echo $heroe->nombre ?></h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
