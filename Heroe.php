@@ -1,13 +1,14 @@
 <?php
 
 include GrupoHeroes.php;
-class Heroe extends GrupoHeroes
+class Heroe /*extends GrupoHeroes*/
 {
     public $nombre;
     public $fecha;
     public $poderes;
     public $bio;
     public $universo;
+
 
     public function __construct($nombre, $fecha, $poderes, $bio, $universo)
     {
@@ -16,6 +17,7 @@ class Heroe extends GrupoHeroes
         $this->poderes = $poderes;
         $this->bio = $bio;
         $this->universo = $universo;
+       // $this->nombreGrupo = $nombreGrupo;
     }
 
     public function getNombre()
@@ -27,15 +29,15 @@ class Heroe extends GrupoHeroes
     {
         switch ($universo) {
             case 'dc':
-            return "dc";
+                return "dc.png";
                 break;
 
             case 'marvel':
-                return "marvel";
+                return "marvel.jpg";
                 break;
 
             default:
-            return "default";
+                return "default.png";
                 break;
         }
     }
