@@ -1,6 +1,7 @@
 <?php
 
-class Heroe
+include GrupoHeroes.php;
+class Heroe extends GrupoHeroes
 {
     public $nombre;
     public $fecha;
@@ -26,12 +27,15 @@ class Heroe
     {
         switch ($universo) {
             case 'dc':
+            return "dc";
                 break;
 
             case 'marvel':
+                return "marvel";
                 break;
 
             default:
+            return "default";
                 break;
         }
     }

@@ -23,10 +23,14 @@ echo "<h1>hola\n</h1>";
 foreach($arrayHeroe as $heroe){
     ?>
     <div class="card" style="width: 18rem;">
+   <!-- <img class="card-img-top" src=".../cards/.jpg" alt="Card image cap"> -->
         <div class="card-body">
             <h5 class="card-title"><?php echo $heroe->nombre ?></h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">Año de aparición: <?php echo $heroe->fecha ?></p>
+            <p class="card-text">Poderes: <?php echo $heroe->poderes ?></p>
+            <p class="card-text">Biografía: <?php echo $heroe->bio ?></p>
+            <img class="card-img-top" src=".../cards/<?php echo $heroe->ComprobarUniverso() ?>.jpg" alt="Card image cap">
+           <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
    <?php
