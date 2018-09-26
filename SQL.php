@@ -24,8 +24,7 @@ function Consulta($mysqli)
 
 function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo)
 {
-    echo entra;
-    if ($mysqli->query("INSERT INTO Heroes (nombre, fecha, poderes, bio, universo) VALUES (" . $nombre . ", " . $fecha . ", " . $poderes . ", " . $bio . ", " . $universo . "); ") === true) {
+    if ($mysqli->query("INSERT INTO Heroes (nombre, fecha, poderes, bio, universo) VALUES ('" . $nombre . "', " . $fecha . ", '" . $poderes . '", "' . $bio . "', '" . $universo . "'); ") === true) {
         echo "Hecho!";
     } else {
         echo "Error: " . $mysqli->error;
