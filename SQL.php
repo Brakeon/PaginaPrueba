@@ -1,5 +1,5 @@
 <?php
-include 'Heroe.php';
+//include 'Heroe.php';
 echo hola;
 $mysqli =  mysqli_connect('192.168.1.143', 'asier', 'asier', 'Superheroes');
 
