@@ -27,7 +27,7 @@ class Heroe extends GrupoHeroes
     public function ComprobarUniverso()
     {
         //echo "hola".$nombreGrupo;
-        switch (this->$nombreGrupo) {
+        switch ($this->$nombreGrupo) {
             case "dc":
                 return "dc.png";
                 break;
