@@ -23,7 +23,7 @@ $arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", 
 
 echo "<h1>hola\n</h1>";
 echo $batman->ComprobarUniverso();
-$db= new DB();
+//$db= new DB();
 echo "<h1>holasss\n</h1>";
 //echo Consulta($mysqli);
 
