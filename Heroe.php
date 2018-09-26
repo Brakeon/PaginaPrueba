@@ -1,6 +1,6 @@
 <?php
 
-include GrupoHeroes . php;
+include 'GrupoHeroes.php';
 class Heroe extends GrupoHeroes
 {
     public $nombre;
