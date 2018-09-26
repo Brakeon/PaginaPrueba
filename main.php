@@ -30,7 +30,7 @@ foreach ($arrayHeroe as $heroe) {
             <p class="card-text">Año de aparición: <?php echo $heroe->fecha ?></p>
             <p class="card-text">Poderes: <?php echo $heroe->poderes ?></p>
             <p class="card-text">Biografía: <?php echo $heroe->bio ?></p>
-            <img class="card-img-top" src="cards/<?php echo $heroe->ComprobarUniverso() ?>" alt="Card image cap" style="max-height: 75px;">
+            <img class="card-img-top" src="cards/<?php echo $heroe->ComprobarUniverso() ?>" alt="Card image cap" style="max-height: 75px; width:auto;">
            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
