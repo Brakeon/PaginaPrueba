@@ -34,6 +34,8 @@ foreach ($arrayBD as $key => $value) {
  InsertHeroeSQL($mysqli, "Catwoman", 1940, "ladrona", "....", "dc");
 
 foreach ($arrayHeroe as $heroe) {
+    
+ InsertHeroeSQL($mysqli, $heroe->nombre, $heroe->fecha, $heroe->poderes, $heroe->bio, $heroe->universo);
     ?>
     <div class="card" style="width: 18rem;">
    <!-- <img class="card-img-top" src=".../cards/.jpg" alt="Card image cap"> -->
@@ -41,7 +43,7 @@ foreach ($arrayHeroe as $heroe) {
             <h5 class="card-title"><?php echo $heroe->nombre ?></h5>
             <p class="card-text">Año de aparición: <?php echo $heroe->fecha ?></p>
             <p class="card-text">Poderes: <?php echo $heroe->poderes ?></p>
-            <p class="card-text">Biografía: <?php echo $heroe->bio ?></p>
+            <p class="card-text">Biografía: <?php echo$heroe->bio ?></p>
             <img class="card-img-top" src="cards/<?php echo $heroe->ComprobarUniverso() ?>" alt="Card image cap" style="max-height: 75px; width:auto;">
            <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
