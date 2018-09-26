@@ -22,9 +22,14 @@ function Consulta($mysqli)
     return $array;
 }
 
-function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo){
+function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo)
+{
     echo entra;
-$mysqli->query("INSERT INTO Heroes (nombre, fecha, poderes, bio, universo) VALUES (".$nombre.", ".$fecha.", ".$poderes.", ".$bio.", ".$universo."); ");
+    if ($mysqli->query("INSERT INTO Heroes (nombre, fecha, poderes, bio, universo) VALUES (" . $nombre . ", " . $fecha . ", " . $poderes . ", " . $bio . ", " . $universo . "); ") === true) {
+        echo "Hecho!";
+    } else {
+        echo "Error: " . $mysqli->error;
+    }
 }
 
 /*class DB
