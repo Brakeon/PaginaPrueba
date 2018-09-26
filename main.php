@@ -19,11 +19,11 @@ $batman = new Heroe("Batman", 1939, "ninguno", "...", "dc");*/
 
 //$arrayHeroe = array($hulk, $spiderman, $superman, $batman);
 
-$arraySQL=CargarHeroesSQL();
-foreach ($arraySQL as $ObjSQL){
+$arrayHeroe=CargarHeroesSQL();
+/*foreach ($arraySQL as $ObjSQL){
 if ($ObjSQL!=null){
     array_push($arrayHeroe, $ObjSQL);
-}}
+}}*/
 
 //$arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
 
