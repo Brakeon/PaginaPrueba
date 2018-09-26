@@ -17,20 +17,20 @@ function conectarSQL()
 
 function Consulta( /*$mysqli*/)
 {
-    $mysqli= conectarSQL();
-    if(!$mysqli){
+    $mysqli = conectarSQL();
+    if (!$mysqli) {
         echo "no hay na";
     }
     $resultado = $mysqli->query("SELECT * FROM Heroes");
-    
+
     $array = mysqli_fetch_assoc($resultado);
     return $array;
     cerrarConexion();
 }
 
-function InsertHeroeSQL(/*$mysqli,*/ $nombre, $fecha, $poderes, $bio, $universo)
+function InsertHeroeSQL( /*$mysqli,*/$nombre, $fecha, $poderes, $bio, $universo)
 {
-    $mysqli= conectarSQL();
+    $mysqli = conectarSQL();
     if ($mysqli->query("INSERT INTO Heroes (nombre, fecha, poderes, bio, universo) VALUES ('" . $nombre . "', '" . $fecha . "', '" . $poderes . "', '" . $bio . "', '" . $universo . "'); ") === true) {
         echo "Hecho!";
     } else {
@@ -41,12 +41,14 @@ function InsertHeroeSQL(/*$mysqli,*/ $nombre, $fecha, $poderes, $bio, $universo)
 
 function CargarHeroesSQL()
 {
-    $mysqli= conectarSQL();
-    if(!$mysqli){
+    $mysqli = conectarSQL();
+    include 'Heroe.php';
+
+    if (!$mysqli) {
         echo "no hay na";
     }
     $resultado = $mysqli->query("SELECT nombre, fecha, poderes, bio, universo FROM Heroes");
-    
+
     $array = mysqli_fetch_assoc($resultado);
     return $array;
     cerrarConexion();

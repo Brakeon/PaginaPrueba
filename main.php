@@ -12,20 +12,20 @@ include 'SQL.php';
 
 //$mysqli = conectarSQL();
 
-/*$hulk = new Heroe("Hulk", 1962, "fuerza", "...", "marvel");
+$hulk = new Heroe("Hulk", 1962, "fuerza", "...", "marvel");
 $spiderman = new Heroe("Spiderman", 1962, "sentido arácnido", "...", "marvel");
 $superman = new Heroe("Superman", 1933, "fuerza", "...", "dc");
-$batman = new Heroe("Batman", 1939, "ninguno", "...", "dc");*/
+$batman = new Heroe("Batman", 1939, "ninguno", "...", "dc");
 
-//$arrayHeroe = array($hulk, $spiderman, $superman, $batman);
+$arrayHeroe = array($hulk, $spiderman, $superman, $batman);
 
-$arrayHeroe=CargarHeroesSQL();
+//$arrayHeroe=CargarHeroesSQL();
 /*foreach ($arraySQL as $ObjSQL){
 if ($ObjSQL!=null){
     array_push($arrayHeroe, $ObjSQL);
 }}*/
 
-//$arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
+$arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
 
 echo "<h1>hola\n</h1>";
 //echo $batman->ComprobarUniverso();
