@@ -28,7 +28,7 @@ echo "<h1>holasss\n</h1>";
 
 $arrayBD = Consulta($mysqli);
 
-foreach (arrayBD as $consult) {
+foreach ($arrayBD as $consult) {
     echo "<p>.$consult.</p>";
 }
 
