@@ -8,7 +8,7 @@
 
  <?php
 include 'Heroe.php';
-include 'SQL.php';
+//include 'SQL.php';
 
 $hulk = new Heroe("Hulk", 1962, "fuerza", "...", "marvel");
 $spiderman = new Heroe("Spiderman", 1962, "sentido arácnido", "...", "marvel");
