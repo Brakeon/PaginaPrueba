@@ -11,12 +11,12 @@ $mysqli =  mysqli_connect('localhost', 'asier', 'asier', 'Superheroes',3306);
     }
 Class DB{
     public function __construct(){
-        
+
     }
     function Consulta(){
         $resultado = $mysqli->query("SELECT * FROM Heroes");
-        $fila = $resultado->fetch_assoc();
-        return $fila;
+       // $fila = $resultado->fetch_assoc();
+        return $resultado;
     }
 
     function InsertHeroe(){
