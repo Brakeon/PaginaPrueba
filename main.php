@@ -10,7 +10,7 @@
 include 'Heroe.php';
 include 'SQL.php';
 
-$mysqli= Conectar();
+$mysqli= conectarSQL();
 
 $hulk = new Heroe("Hulk", 1962, "fuerza", "...", "marvel");
 $spiderman = new Heroe("Spiderman", 1962, "sentido arácnido", "...", "marvel");
