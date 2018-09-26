@@ -26,6 +26,7 @@ class Heroe/*extends GrupoHeroes*/
 
     public function ComprobarUniverso()
     {
+        echo $nombreGrupo;
         switch ($nombreGrupo) {
             case "dc":
                 return "dc.png";
