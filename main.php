@@ -21,6 +21,7 @@ $arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", 
 
 echo "<h1>hola\n</h1>";
 echo $batman->ComprobarUniverso();
+echo Consulta();
 
 foreach ($arrayHeroe as $heroe) {
     ?>

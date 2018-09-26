@@ -1,6 +1,6 @@
 <?php
 //include 'Heroe.php';
-echo hola;
+echo holas;
 $mysqli =  mysqli_connect('localhost', 'asier', 'asier', 'Superheroes',3306);
 
     if (!$mysqli) {
