@@ -18,8 +18,9 @@ class DB
             echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
             exit;
         }
+        return $mysqli;
     }
-    public function Consulta()
+    public function Consulta(/*$mysqli*/)
     {
         $resultado = $mysqli->query("SELECT * FROM Heroes");
         // $fila = $resultado->fetch_assoc();
