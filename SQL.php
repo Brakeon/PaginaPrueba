@@ -1,5 +1,6 @@
 <?php
 include 'Heroe.php';
+echo hola;
 $mysqli =  mysqli_connect('locahost', 'asier', 'asier', 'Heroes');
 
     if (!$mysqli) {
