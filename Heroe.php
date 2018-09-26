@@ -1,7 +1,7 @@
 <?php
 
 include GrupoHeroes . php;
-class Heroe/*extends GrupoHeroes*/
+class Heroe extends GrupoHeroes
 {
     public $nombre;
     public $fecha;
