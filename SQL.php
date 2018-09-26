@@ -19,7 +19,7 @@ function Consulta($mysqli)
 {
     $resultado = $mysqli->query("SELECT * FROM Heroes");
     $user = mysqli_fetch_assoc($resultado);
-    return $user;
+    return $resultado;
 }
 
 /*class DB
