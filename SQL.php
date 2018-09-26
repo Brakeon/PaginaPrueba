@@ -24,7 +24,8 @@ class DB
     {
         $resultado = $mysqli->query("SELECT * FROM Heroes");
         // $fila = $resultado->fetch_assoc();
-        return $resultado;
+        $user = mysqli_fetch_assoc($resultado);
+        return $user;
     }
 
     public function InsertHeroe()
