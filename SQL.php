@@ -18,7 +18,7 @@ function conectarSQL()
 function Consulta($mysqli)
 {
     $resultado = $mysqli->query("SELECT * FROM Heroes");
-    $array = mysqli_fetch_array($resultado);
+    $array = mysqli_fetch_asoc($resultado);
     return $array;
 }
 
