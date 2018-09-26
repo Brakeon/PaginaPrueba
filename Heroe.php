@@ -1,7 +1,7 @@
 <?php
 
-include GrupoHeroes.php;
-class Heroe /*extends GrupoHeroes*/
+include GrupoHeroes . php;
+class Heroe/*extends GrupoHeroes*/
 {
     public $nombre;
     public $fecha;
@@ -9,15 +9,14 @@ class Heroe /*extends GrupoHeroes*/
     public $bio;
     public $universo;
 
-
-    public function __construct($nombre, $fecha, $poderes, $bio, $universo)
+    public function __construct($nombre, $fecha, $poderes, $bio, $nombreGrupo/*, $universo*/)
     {
         $this->nombre = $nombre;
         $this->fecha = $fecha;
         $this->poderes = $poderes;
         $this->bio = $bio;
-        $this->universo = $universo;
-       // $this->nombreGrupo = $nombreGrupo;
+        // $this->universo = $universo;
+        $this->nombreGrupo = $nombreGrupo;
     }
 
     public function getNombre()
@@ -27,12 +26,12 @@ class Heroe /*extends GrupoHeroes*/
 
     public function ComprobarUniverso()
     {
-        switch ($universo) {
-            case 'dc':
+        switch ($nombreGrupo) {
+            case "dc":
                 return "dc.png";
                 break;
 
-            case 'marvel':
+            case "marvel":
                 return "marvel.jpg";
                 break;
 
