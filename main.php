@@ -27,9 +27,10 @@ echo $batman->ComprobarUniverso();
 echo "<h1>holasss\n</h1>";
 
 $arrayBD = Consulta($mysqli);
-/*foreach (Consulta($mysqli) as $consult) {
-echo Consulta($consult);
-}*/
+
+foreach (arrayBD as $consult) {
+    echo "<p>.$consult.</p>";
+}
 
 foreach ($arrayHeroe as $heroe) {
     ?>
