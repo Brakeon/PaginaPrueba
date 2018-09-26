@@ -41,5 +41,5 @@ class Heroe extends GrupoHeroes
                 break;
         }
     }
-
+    
 }
