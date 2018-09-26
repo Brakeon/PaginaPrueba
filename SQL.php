@@ -1,7 +1,7 @@
 <?php
 //include 'Heroe.php';
 echo holas;
-$mysqli = null;
+
 function conectarSQL()
 {
     $mysqli = mysqli_connect('localhost', 'asier', 'asier', 'Superheroes', 3306);
@@ -17,7 +17,7 @@ function conectarSQL()
 
 function Consulta( /*$mysqli*/)
 {
-    conectarSQL();
+    $mysqli= conectarSQL();
     if(!$mysqli){
         echo "no hay na";
     }
