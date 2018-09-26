@@ -42,7 +42,6 @@ function InsertHeroeSQL( /*$mysqli,*/$nombre, $fecha, $poderes, $bio, $universo)
 function CargarHeroesSQL()
 {
     $mysqli = conectarSQL();
-    include 'Heroe.php';
 
     if (!$mysqli) {
         echo "no hay na";
