@@ -1,7 +1,7 @@
 <?php
 include 'Heroe.php';
 echo hola;
-$mysqli =  mysqli_connect('locahost', 'asier', 'asier', 'Heroes');
+$mysqli =  mysqli_connect('192.168.1.143', 'asier', 'asier', 'Heroes');
 
     if (!$mysqli) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -10,6 +10,8 @@ $mysqli =  mysqli_connect('locahost', 'asier', 'asier', 'Heroes');
         exit;
     }
 Class DB{
-    
+    function Mensaje(){
+    $resultado = $mysqli->query("SELECT '¡Hola, querido usuario de MySQL!' AS _message FROM DUAL");
+$fila = $resultado->fetch_assoc();}
 }
 ?>
