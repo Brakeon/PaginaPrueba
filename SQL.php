@@ -12,7 +12,7 @@ function conectarSQL()
         echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
-    //return $mysqli;
+    return $mysqli;
 }
 
 function Consulta( /*$mysqli*/)
