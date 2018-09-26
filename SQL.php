@@ -2,6 +2,8 @@
 //include 'Heroe.php';
 echo holas;
 
+$mysqli=null;
+
 function conectarSQL()
 {
     $mysqli = mysqli_connect('localhost', 'asier', 'asier', 'Superheroes', 3306);
@@ -12,14 +14,16 @@ function conectarSQL()
         echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
-    return $mysqli;
+    //return $mysqli;
 }
 
-function Consulta($mysqli)
+function Consulta(/*$mysqli*/)
 {
+    conectarSQL();
     $resultado = $mysqli->query("SELECT * FROM Heroes");
     $array = mysqli_fetch_assoc($resultado);
     return $array;
+    cerrarConexion();
 }
 
 function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo)
@@ -29,6 +33,14 @@ function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo)
     } else {
         echo "Error: " . $mysqli->error;
     }
+}
+
+function CargarHeroeSQL($mysqli){
+
+}
+
+function cerrarConexion(){
+    mysqli_close();
 }
 
 /*class DB
