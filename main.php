@@ -10,6 +10,8 @@
 include 'Heroe.php';
 include 'SQL.php';
 
+$mysqli= Conectar();
+
 $hulk = new Heroe("Hulk", 1962, "fuerza", "...", "marvel");
 $spiderman = new Heroe("Spiderman", 1962, "sentido arácnido", "...", "marvel");
 $superman = new Heroe("Superman", 1933, "fuerza", "...", "dc");
@@ -23,7 +25,7 @@ echo "<h1>hola\n</h1>";
 echo $batman->ComprobarUniverso();
 $db= new DB();
 echo "<h1>holasss\n</h1>";
-echo $db->Consulta();
+Consulta($mysqli);
 
 foreach ($arrayHeroe as $heroe) {
     ?>

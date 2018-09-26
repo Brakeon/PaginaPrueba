@@ -2,35 +2,51 @@
 //include 'Heroe.php';
 echo holas;
 
-class DB
+function conectarSQL()
 {
-    public function iniciar()
-    {
+    $mysqli = mysqli_connect('localhost', 'asier', 'asier', 'Superheroes', 3306);
 
+    if (!$mysqli) {
+        echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+        echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+        echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+        exit;
     }
-    public function __construct()
-    {
-        $mysqli = new mysqli_connect('localhost', 'asier', 'asier', 'Superheroes', 3306);
-
-        if (!$mysqli) {
-            echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
-            echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
-            echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
-            exit;
-        } else {
-            return $mysqli;
-        }
-    }
-    public function Consulta($mysqli)
-    {
-        $resultado = $mysqli->query("SELECT * FROM Heroes");
-        // $fila = $resultado->fetch_assoc();
-        $user = mysqli_fetch_assoc($resultado);
-        return $user;
-    }
-
-    public function InsertHeroe()
-    {
-
-    }
+    return $mysqli;
 }
+
+function Consulta($mysqli)
+{
+    $resultado = $mysqli->query("SELECT * FROM Heroes");
+    $user = mysqli_fetch_assoc($resultado);
+    return $user;
+}
+
+/*class DB
+{
+public function iniciar()
+{
+
+}
+public function __construct()
+{
+$mysqli = mysqli_connect('localhost', 'asier', 'asier', 'Superheroes', 3306);
+
+if (!$mysqli) {
+echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+exit;}
+}
+public function Consulta($mysqli)
+{
+$resultado = $mysqli->query("SELECT * FROM Heroes");
+$user = mysqli_fetch_assoc($resultado);
+return $user;
+}
+
+public function InsertHeroe()
+{
+
+}
+}*/
