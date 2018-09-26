@@ -25,8 +25,10 @@ echo "<h1>hola\n</h1>";
 echo $batman->ComprobarUniverso();
 //$db= new DB();
 echo "<h1>holasss\n</h1>";
+
+$arrayBD = Consulta($mysqli);
 /*foreach (Consulta($mysqli) as $consult) {
-    echo Consulta($consult);
+echo Consulta($consult);
 }*/
 
 foreach ($arrayHeroe as $heroe) {

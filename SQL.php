@@ -18,8 +18,8 @@ function conectarSQL()
 function Consulta($mysqli)
 {
     $resultado = $mysqli->query("SELECT * FROM Heroes");
-    $user = mysqli_fetch_assoc($resultado);
-    return $resultado;
+    $array = mysqli_fetch_array($resultado);
+    return $array;
 }
 
 /*class DB
