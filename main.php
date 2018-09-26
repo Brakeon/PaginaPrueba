@@ -31,6 +31,7 @@ $arrayBD = Consulta($mysqli);
 foreach ($arrayBD as $key => $value) {
     echo "<p>$value</p>";
 }
+ InsertHeroeSQL($mysqli, "Catwoman", 1940, "ladrona", "....", "dc");
 
 foreach ($arrayHeroe as $heroe) {
     ?>

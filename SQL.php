@@ -22,6 +22,10 @@ function Consulta($mysqli)
     return $array;
 }
 
+function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo){
+$mysqli->query("INSERT INTO Heroes (nombre, fecha, poderes, bio, universo) VALUES (".$nombre.", ".$fecha.", ".$poderes.", ".$bio.", ".$universo."); ");
+}
+
 /*class DB
 {
 public function iniciar()
