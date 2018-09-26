@@ -1,9 +1,7 @@
 <?php
 //include 'Heroe.php';
 echo holas;
-
-$mysqli=null;
-
+$mysqli = null;
 function conectarSQL()
 {
     $mysqli = mysqli_connect('localhost', 'asier', 'asier', 'Superheroes', 3306);
@@ -17,7 +15,7 @@ function conectarSQL()
     //return $mysqli;
 }
 
-function Consulta(/*$mysqli*/)
+function Consulta( /*$mysqli*/)
 {
     conectarSQL();
     $resultado = $mysqli->query("SELECT * FROM Heroes");
@@ -35,11 +33,13 @@ function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo)
     }
 }
 
-function CargarHeroeSQL($mysqli){
+function CargarHeroeSQL($mysqli)
+{
 
 }
 
-function cerrarConexion(){
+function cerrarConexion()
+{
     mysqli_close();
 }
 

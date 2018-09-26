@@ -26,7 +26,7 @@ echo $batman->ComprobarUniverso();
 //$db= new DB();
 echo "<h1>holasss\n</h1>";
 
-$arrayBD = Consulta(/*$mysqli*/);
+$arrayBD = Consulta( /*$mysqli*/);
 
 foreach ($arrayBD as $key => $value) {
     echo "<p>$value</p>";
