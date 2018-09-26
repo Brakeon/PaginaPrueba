@@ -28,18 +28,28 @@ function Consulta( /*$mysqli*/)
     cerrarConexion();
 }
 
-function InsertHeroeSQL($mysqli, $nombre, $fecha, $poderes, $bio, $universo)
+function InsertHeroeSQL(/*$mysqli,*/ $nombre, $fecha, $poderes, $bio, $universo)
 {
+    $mysqli= conectarSQL();
     if ($mysqli->query("INSERT INTO Heroes (nombre, fecha, poderes, bio, universo) VALUES ('" . $nombre . "', '" . $fecha . "', '" . $poderes . "', '" . $bio . "', '" . $universo . "'); ") === true) {
         echo "Hecho!";
     } else {
         echo "Error: " . $mysqli->error;
     }
+    cerrarConexion();
 }
 
-function CargarHeroeSQL($mysqli)
+function CargarHeroesSQL()
 {
-
+    $mysqli= conectarSQL();
+    if(!$mysqli){
+        echo "no hay na";
+    }
+    $resultado = $mysqli->query("SELECT nombre, fecha, poderes, bio, universo FROM Heroes");
+    
+    $array = mysqli_fetch_assoc($resultado);
+    return $array;
+    cerrarConexion();
 }
 
 function cerrarConexion()

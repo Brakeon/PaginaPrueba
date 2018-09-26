@@ -12,14 +12,20 @@ include 'SQL.php';
 
 //$mysqli = conectarSQL();
 
-$hulk = new Heroe("Hulk", 1962, "fuerza", "...", "marvel");
+/*$hulk = new Heroe("Hulk", 1962, "fuerza", "...", "marvel");
 $spiderman = new Heroe("Spiderman", 1962, "sentido arácnido", "...", "marvel");
 $superman = new Heroe("Superman", 1933, "fuerza", "...", "dc");
-$batman = new Heroe("Batman", 1939, "ninguno", "...", "dc");
+$batman = new Heroe("Batman", 1939, "ninguno", "...", "dc");*/
 
-$arrayHeroe = array($hulk, $spiderman, $superman, $batman);
+//$arrayHeroe = array($hulk, $spiderman, $superman, $batman);
 
-$arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
+$arraySQL=CargarHeroesSQL();
+foreach ($arraySQL as $ObjSQL){
+if ($ObjSQL!=null){
+    array_push($arrayHeroe, $ObjSQL);
+}}
+
+//$arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
 
 echo "<h1>hola\n</h1>";
 echo $batman->ComprobarUniverso();
@@ -31,11 +37,11 @@ $arrayBD = Consulta( /*$mysqli*/);
 foreach ($arrayBD as $key => $value) {
     echo "<p>$value</p>";
 }
-//InsertHeroeSQL($mysqli, "Superpiderman", 2018, "cansino", "....", "matutano");
+//InsertHeroeSQL( "Superpiderman", 2018, "cansino", "....", "matutano");
 
 foreach ($arrayHeroe as $heroe) {
 
-    //InsertHeroeSQL($mysqli, $heroe->nombre, $heroe->fecha, $heroe->poderes, $heroe->bio, $heroe->universo);
+    //InsertHeroeSQL( $heroe->nombre, $heroe->fecha, $heroe->poderes, $heroe->bio, $heroe->universo);
     ?>
     <div class="card" style="width: 18rem;">
    <!-- <img class="card-img-top" src=".../cards/.jpg" alt="Card image cap"> -->
