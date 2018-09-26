@@ -18,7 +18,11 @@ function conectarSQL()
 function Consulta( /*$mysqli*/)
 {
     conectarSQL();
+    if(!$mysqli){
+        echo "no hay na";
+    }
     $resultado = $mysqli->query("SELECT * FROM Heroes");
+    
     $array = mysqli_fetch_assoc($resultado);
     return $array;
     cerrarConexion();
