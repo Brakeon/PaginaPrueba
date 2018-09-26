@@ -28,8 +28,8 @@ echo "<h1>holasss\n</h1>";
 
 $arrayBD = Consulta($mysqli);
 
-foreach ($arrayBD as $consult) {
-    echo "<p>.$consult.</p>";
+foreach ($arrayBD as $key => $value) {
+    echo "<p>.$value.</p>";
 }
 
 foreach ($arrayHeroe as $heroe) {
