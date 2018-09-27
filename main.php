@@ -22,7 +22,7 @@ $arrayHeroe = array($hulk, $spiderman, $superman, $batman);
 //$arrayHeroe=CargarHeroesSQL();
 /*foreach ($arraySQL as $ObjSQL){
 if ($ObjSQL!=null){
-    array_push($arrayHeroe, $ObjSQL);
+array_push($arrayHeroe, $ObjSQL);
 }}*/
 
 $arrayHeroe[sizeof($arrayHeroe) + 1] = new Heroe("Deadpool", 1991, "Curación", "...", "marvel");
@@ -57,6 +57,7 @@ foreach ($arrayHeroe as $heroe) {
    <?php
 }
 ?>
-
+<iframe src="https://embed.spotify.com/?uri=spotify:artist:711MCceyCBcFnzjGY4Q7Un" width="300" height="250">
+</iframe>
 </body>
 </html>
